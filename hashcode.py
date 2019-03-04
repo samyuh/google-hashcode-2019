@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
 def open_and_parse():
-    f = open('b_lovely_landscapes.txt', 'r')
+    f = open('d.txt', 'r')
     first_line = f.readline()
     
     #Get the first information from the file 
@@ -64,7 +64,7 @@ def main():
     vert_parsed = []
     for i in range(0, len(vert), 2):
         tags = vert[i][2] + vert[i+1][2]
-        tags = sorted(tags)
+        tags = sorted(list(set(tags)))
         vert_parsed += [("H", len(vert[i][2]+ vert[i+1][2]),tags,vert[i][3] + " " +vert[i+1][3]),]
             
     #sort vertical photos  
@@ -78,7 +78,34 @@ def main():
     final_grid += vert_parsed
     
     final_grid.sort(key=lambda x: x[2])
+    skip = False
+    dinamic_grid = final_grid.copy()
+    final = [final_grid[0],]
+    i = final[len(final)-1]
+    while len(final) != len(final_grid):
+        print(len(final), len(final_grid))
+        #i = final[len(final)-1]
+        for k in [14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]: #Put the numbers here, but care
+            #for j in final_grid:
+            for idx,j in enumerate(dinamic_grid):
+                if j != i and (len(set(i[2]) & set(j[2])) >= k) and (len(set(i[2]) - set(j[2])) >= k) and (len(set(j[2]) - set(i[2])) >= k):
+                    print(len(set(i[2]) & set(j[2])), len(set(i[2]) - set(j[2])), len(set(j[2]) - set(i[2])))
+                    if j not in final:
+                        i = j
+                        del dinamic_grid[idx]
+                        final.append(j)
+                        skip = True
+                        break
+            if skip:
+                skip = False
+                break
+                
+    for m, i in enumerate(final_grid):
+        if i not in final:
+            final.append(i)
+        print(m, "m")
     
+    final_grid = final
     tup = []        
     for i in range(0, len(final_grid)):
         tup += [str(final_grid[i][3]) + "\n",]
