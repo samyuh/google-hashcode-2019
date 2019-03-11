@@ -10,9 +10,7 @@ Hash Code is a team programming competition, organized by Google, for students a
 ## Normal Round Ranking
 ![Hub Rank](score/hub_rank.png "Hub Rank")
 
-## Points: Normal Round and After Round
-
-![Normal Round](score/normal_round.png "Normal Round")
+## Score:  After Round
 
 ![After Round](score/after_round.PNG "After Round")
 
