@@ -1,5 +1,5 @@
-# HashCode2019
-Google HashCode2019
+# Hash Code 2019
+Hash Code is a team programming competition, organized by Google, for students and professionals around the world. 
 
 ## Authors
 
@@ -10,7 +10,7 @@ Google HashCode2019
 ## Normal Round Ranking
 ![Hub Rank](score/hub_rank.png "Hub Rank")
 
-## Points
+## Points: Normal Round and After Round
 
 ![Normal Round](score/normal_round.png "Normal Round")
 
