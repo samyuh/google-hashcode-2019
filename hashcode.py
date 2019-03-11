@@ -85,7 +85,7 @@ def main():
     while len(final) != len(final_grid):
         print(len(final), len(final_grid))
         #i = final[len(final)-1]
-        for k in [14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]: #Put the numbers here, but care
+        for k in range(6,-1,-1): #Put the numbers here, but care
             #for j in final_grid:
             for idx,j in enumerate(dinamic_grid):
                 if j != i and (len(set(i[2]) & set(j[2])) >= k) and (len(set(i[2]) - set(j[2])) >= k) and (len(set(j[2]) - set(i[2])) >= k):
