@@ -7,8 +7,9 @@
 * **Henrique Pereira** - [GitHub](https://github.com/GodAnri)
 * **Teresa Corado** - [GitHub](https://github.com/Reesa23)
 
-## Ranking: Normal Round
+## Normal Round
 ![Hub Rank](score/hub_rank.png "Hub Rank")
 
-## Score:  After Round
+## After Round
 ![After Round](score/after_round.PNG "After Round")
+![After Round Rank](score/after_round_rank.PNG "After Round Rank")
