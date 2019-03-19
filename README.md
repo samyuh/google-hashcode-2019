@@ -12,4 +12,4 @@
 
 ## After Round
 ![After Round](score/after_round.PNG "After Round")
-![After Round Rank](score/after_round_rank.PNG "After Round Rank")
+![After Round Rank](score/after_round_rank.png "After Round Rank")
